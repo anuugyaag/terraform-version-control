@@ -1,76 +1,35 @@
-# Project 4: IAM User Automation with Terraform
+# Project 6: Version Control Infrastructure
 
-## Project Overview
-This project automates the creation of an AWS IAM user and attaches an S3 read-only access policy using Terraform.
-
-## AWS Services Used
-- AWS IAM
-- Amazon S3
+## Objective
+The objective of this project is to manage Terraform code using Git and GitHub and understand the version control workflow using branches and Pull Requests.
 
 ## Tools Used
+- Git
+- GitHub
+- GitHub CLI
 - Terraform
-- AWS CLI
-- Linux
+- Ubuntu Linux
 
-## Project Objectives
-1. Create a new IAM user using Terraform.
-2. Define an S3 read-only IAM policy.
-3. Store the IAM policy JSON in a Terraform variable.
-4. Attach the policy to the newly created IAM user.
-5. Verify the deployed resources using Terraform.
+## Implementation
 
-## IAM User Details
-- Username: `terraform-s3-reader-p4`
-- Policy Name: `S3-Read-Only-Policy`
+1. Created a separate project folder named `project-6`.
+2. Copied Terraform configuration files into the project folder.
+3. Initialized a Git repository using `git init`.
+4. Configured Git username and email.
+5. Created a `.gitignore` file to exclude Terraform state files and unnecessary files.
+6. Added and committed the project files to the `main` branch.
+7. Created a GitHub repository named `terraform-version-control`.
+8. Pushed the code to GitHub.
+9. Created a separate branch named `update-project`.
+10. Modified `main.tf`, committed the changes, and pushed the branch to GitHub.
+11. Created a Pull Request from `update-project` to `main`.
 
-## Permissions Granted
-- `s3:ListBucket`
-- `s3:GetObject`
+## GitHub Repository
+https://github.com/anuugyaag/terraform-version-control
 
-## Project Files
-- `provider.tf` – AWS provider configuration.
-- `variables.tf` – IAM username and policy variables.
-- `main.tf` – IAM user and policy resources.
-- `outputs.tf` – Deployment outputs.
-- `README.md` – Project documentation.
+## Pull Request
+https://github.com/anuugyaag/terraform-version-control/pull/1
 
-## Deployment Commands
+## Conclusion
+This project demonstrates how Git and GitHub can be used to track Terraform code changes, manage branches, maintain commit history, and collaborate through Pull Requests.
 
-Initialize Terraform:
-```bash
-terraform init
-```
-
-Format configuration:
-```bash
-terraform fmt
-```
-
-Validate configuration:
-```bash
-terraform validate
-```
-
-Preview deployment:
-```bash
-terraform plan
-```
-
-Deploy resources:
-```bash
-terraform apply
-```
-
-Verify resources:
-```bash
-terraform state list
-terraform output
-```
-
-## Deployment Result
-Successfully created:
-- 1 IAM user
-- 1 IAM user inline policy
-
-Terraform deployment summary:
-`2 added, 0 changed, 0 destroyed`

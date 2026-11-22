@@ -1,4 +1,4 @@
-
+# Updated through Git feature branch for task 6
 # Create IAM user
 resource "aws_iam_user" "s3_reader" {
   name = var.iam_user_name
